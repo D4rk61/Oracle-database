@@ -1,9 +1,12 @@
 # Instalacion definitiva de ORACLE DATABASE EN **ORACLE LINUX**
 
 
-###### Antes de empezar: Me disculpo si mi explicacion no es la mas clara, es de las primeras veces que instalo ORacle-Database; cualquier duda que tengan pueden hacer uso de ChatGPT copiando y pegando la guia que aqui he escrito y si les llega a dar algun error pegar el "output" (la salida del error) en chatGPT y decir que, que pueden hacer
+###### Antes de empezar: Me disculpo si mi explicacion no es la mas clara, es de las primeras veces que instalo ORacle-Database; cualquier duda que tengan pueden hacer uso de ChatGPT copiando y pegando la guia que aqui he escrito y si les llega a dar algun error pegar el "output" (la salida del error) en chatGPT y decir que, que pueden hacer; los archivos estan dentro de carpeta **recursos**
 
 ### Pre-instalacion
+
+Los archivos .rpm se encuentran en la carpeta **recursos**; los archivos por cuestiones de espacio los subi a google drive, solo es cuestion de entrar y descargarlos :D
+
 
 1. Instalaremos la ISO de oracle linux, disponible en este repositorio,
    recomiendo instalar la version **Oracle 8** intente user la version 9 y no
@@ -58,6 +61,19 @@ sudo rpm -ivh oracle-database-preinstall-21c-1.0-1.el8.x86_64.rpm
 ```
 
 ### Instalacion del software
+- **. Mover los archivos de nuestra maquina host a una maquina virtual:**
+
+Esta es la forma mas facil de mover archivos de nuestra maquina host a una maquina virtual; que seria usando el protocolo **ssh**
+
+```bash
+scp {archivo} {usuario}@{host}:{ruta}
+
+#  ejemplo:
+scp oracle-database-ee-21c-1.0-1.ol8.x86_64.rpm oracle@192.168.0.5:~/Descargas
+```
+
+Con esto podemos mover los archivos que descargamos desde el drive **(El archivo de la base de datos, esta en la carpeta "recursos")** a una maquina virtual o inclusive a servidores remotos
+
 
 4. **Instalacion de la Oracle-database**
 
